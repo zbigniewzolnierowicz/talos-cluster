@@ -13,6 +13,12 @@
 2. Install Cilium
 3. Install MetalLB
 
+## Issues
+
+### MetalLB not allowing access to pods
+
+Namespace probably doesn't have the labels. Look up [here](https://metallb.universe.tf/installation/#installation-with-helm).
+
 ## Commands
 
 ### Wipe everything
