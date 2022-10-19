@@ -15,6 +15,14 @@
 
 ## Issues
 
+### Installing democratic-csi
+
+Remember to patch Talos with the patch in `hack/talos/iscsi.patch.yaml`.
+
+```sh
+talosctl --talosconfig .talos/talosconfig patch mc -p @patch.yaml -n 192.168.1.101,192.168.1.102,192.168.1.103
+```
+
 ### MetalLB not allowing access to pods
 
 Namespace probably doesn't have the labels. Look up [here](https://metallb.universe.tf/installation/#installation-with-helm).
