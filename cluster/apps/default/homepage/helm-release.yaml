@@ -23,7 +23,7 @@ spec:
       retries: 5
   values:
     controller:
-      replicas: 4
+      replicas: 3
       strategy: RollingUpdate
     image:
       repository: ghcr.io/zbigniewzolnierowicz/homepage
