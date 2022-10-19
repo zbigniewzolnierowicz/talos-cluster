@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "**/cluster/**/*.sops.toml": "plaintext",
+        "**/cluster/**/.decrypted~*.sops.toml": "toml"
+    }
+}

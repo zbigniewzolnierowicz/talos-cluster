@@ -4,9 +4,12 @@ kind: Kustomization
 namespace: default
 resources:
   - helm-release.yaml
-# configMapGenerator:
-#   - name: authelia
-#     files:
-#       - config/configuration.yml
-# generatorOptions:
-#   disableNameSuffixHash: true
+  - secret.sops.yaml
+patchesStrategicMerge:
+  - patches/postgres.yaml
+configMapGenerator:
+  - name: authelia
+    files:
+      - config/configuration.yml
+generatorOptions:
+  disableNameSuffixHash: true
