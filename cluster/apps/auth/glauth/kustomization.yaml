@@ -4,9 +4,11 @@ kind: Kustomization
 namespace: default
 resources:
   - helm-release.yaml
-configMapGenerator:
-  - name: authelia
+secretGenerator:
+  - name: glauth
     files:
-      - config/configuration.yml
+      - server.toml=config/server.sops.toml
+      - groups.toml=config/groups.sops.toml
+      - users.toml=config/users.sops.toml
 generatorOptions:
   disableNameSuffixHash: true

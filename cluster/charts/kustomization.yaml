@@ -16,3 +16,4 @@ resources:
   - rook.yaml
   - longhorn.yaml
   - democratic-csi.yaml
+  - cnpg.yaml
